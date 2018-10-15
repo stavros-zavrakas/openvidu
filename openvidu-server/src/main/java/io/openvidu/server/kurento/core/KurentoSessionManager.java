@@ -282,6 +282,8 @@ public class KurentoSessionManager extends SessionManager {
 								.recordingLayout(session.getSessionProperties().defaultRecordingLayout())
 								.customLayout(session.getSessionProperties().defaultCustomLayout()).build());
 			}).start();
+		} else {
+			log.info("Recording is not starting automatically");
 		}
 
 		session.newPublisher(participant);
